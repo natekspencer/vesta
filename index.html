@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vesta &mdash; Vesta Documentation (0.5.0)</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Vesta
+          </a>
+              <div class="version">
+                0.5.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Vesta</a><ul>
+<li><a class="reference internal" href="#api-client">API Client</a></li>
+<li><a class="reference internal" href="#character-encoding">Character Encoding</a></li>
+<li><a class="reference internal" href="#message-posting">Message Posting</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Vesta</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Vesta</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vesta">
+<h1>Vesta<a class="headerlink" href="#vesta" title="Permalink to this headline"></a></h1>
+<a class="reference external image-reference" href="https://github.com/jparise/vesta"><img alt="Vesta: A Vestaboard client library" class="align-center" src="_images/logo.png" /></a>
+<p>Vesta is a <a class="reference external" href="https://www.vestaboard.com/">Vestaboard</a> client library for
+Python. It provides an API client and character encoding utilities.</p>
+<section id="api-client">
+<h2>API Client<a class="headerlink" href="#api-client" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="vesta.Client">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">Client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_secret</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'https://platform.vestaboard.com'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vesta.Client" title="Permalink to this definition"></a></dt>
+<dd><p>Provides a Vestaboard API client interface.</p>
+<p>Credentials must be provided as an <code class="docutils literal notranslate"><span class="pre">api_key</span></code> and <code class="docutils literal notranslate"><span class="pre">api_secret</span></code>.</p>
+<p>Optional, an alternate <code class="docutils literal notranslate"><span class="pre">base_url</span></code> can be specified, as well as any
+additional HTTP <code class="docutils literal notranslate"><span class="pre">headers</span></code> that should be sent with every request
+(such as a custom <cite>User-Agent</cite> header).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="vesta.Client.get_subscriptions">
+<span class="sig-name descname"><span class="pre">get_subscriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.Client.get_subscriptions" title="Permalink to this definition"></a></dt>
+<dd><p>Lists all subscriptions to which the viewer has access.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vesta.Client.get_viewer">
+<span class="sig-name descname"><span class="pre">get_viewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.Client.get_viewer" title="Permalink to this definition"></a></dt>
+<dd><p>Describes the currently authenticated viewer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="vesta.Client.post_message">
+<span class="sig-name descname"><span class="pre">post_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subscription_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.Client.post_message" title="Permalink to this definition"></a></dt>
+<dd><p>Post of a new message to a subscription.</p>
+<p>The authenticated viewer must have access to the subscription.</p>
+<p><cite>message</cite> can be either a string of text or a two-dimensional array of
+character codes representing the exact positions of characters on the
+board.</p>
+<p>If text is specified, lines will be centered horizontally and
+vertically if possible. Character codes will be inferred for
+alphanumeric and punctuation, or can be explicitly specified in-line in
+the message with curly braces containing the character code.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="character-encoding">
+<h2>Character Encoding<a class="headerlink" href="#character-encoding" title="Permalink to this headline"></a></h2>
+<p>All Vestaboard characters (letters, numbers, symbols, and colors) are encoded
+as integer <a class="reference external" href="https://docs.vestaboard.com/characters">character codes</a>. Vesta
+includes some useful routines for working with these character codes.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="vesta.Color">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#vesta.Color" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
+<p>Color chips</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.BLACK">
+<span class="sig-name descname"><span class="pre">BLACK</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#vesta.Color.BLACK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.BLUE">
+<span class="sig-name descname"><span class="pre">BLUE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">67</span></em><a class="headerlink" href="#vesta.Color.BLUE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.GREEN">
+<span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"> <span class="pre">=</span> <span class="pre">66</span></em><a class="headerlink" href="#vesta.Color.GREEN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.ORANGE">
+<span class="sig-name descname"><span class="pre">ORANGE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">64</span></em><a class="headerlink" href="#vesta.Color.ORANGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.RED">
+<span class="sig-name descname"><span class="pre">RED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">63</span></em><a class="headerlink" href="#vesta.Color.RED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.VIOLET">
+<span class="sig-name descname"><span class="pre">VIOLET</span></span><em class="property"> <span class="pre">=</span> <span class="pre">68</span></em><a class="headerlink" href="#vesta.Color.VIOLET" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.WHITE">
+<span class="sig-name descname"><span class="pre">WHITE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">69</span></em><a class="headerlink" href="#vesta.Color.WHITE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="vesta.Color.YELLOW">
+<span class="sig-name descname"><span class="pre">YELLOW</span></span><em class="property"> <span class="pre">=</span> <span class="pre">65</span></em><a class="headerlink" href="#vesta.Color.YELLOW" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vesta.encode">
+<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.encode" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes a string as a list of character codes.</p>
+<p>In addition to printable characters, the string can contain character code
+sequences inside curly braces, such as <code class="docutils literal notranslate"><span class="pre">{5}</span></code> or <code class="docutils literal notranslate"><span class="pre">{65}</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the string contains unsupported characters or codes</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{67}</span><span class="s2"> Hello, World </span><span class="si">{68}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="go">[67, 61, 8, 5, 12, 12, 15, 55, 61, 23, 15, 18, 12, 4, 61, 68]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vesta.encode_row">
+<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">encode_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Color.BLACK</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.encode_row" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes a string as a row of character codes.</p>
+<p>In addition to printable characters, the string can contain character code
+sequences inside curly braces, such as <code class="docutils literal notranslate"><span class="pre">{5}</span></code> or <code class="docutils literal notranslate"><span class="pre">{65}</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">align</span></code> controls the text’s alignment within the row: <cite>left</cite>, <cite>right</cite>, or
+<cite>center</cite>. The <code class="docutils literal notranslate"><span class="pre">fill</span></code> character code (generally a <a class="reference internal" href="#vesta.Color" title="vesta.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>) is
+used to fill out any additional space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the string contains unsupported characters or codes,
+or if the resulting encoding sequence would exceed the
+maximum number of support characters</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_row</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{67}</span><span class="s2"> Hello, World </span><span class="si">{68}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="go">[0, 0, 0, 67, 61, 8, 5, 12, 12, 15, 55, 61, 23, 15, 18, 12, 4, 61, 68, 0, 0, 0]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vesta.pprint">
+<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">pprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data:</span> <span class="pre">Union[List[int],</span> <span class="pre">List[List[int]]],</span> <span class="pre">stream:</span> <span class="pre">TextIO</span> <span class="pre">=</span> <span class="pre">&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;,</span> <span class="pre">*,</span> <span class="pre">sep:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'|',</span> <span class="pre">block:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'◼︎'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vesta.pprint" title="Permalink to this definition"></a></dt>
+<dd><p>Prints a console-formatted representation of encoded character data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> may be a single list or a two-dimensional array of character codes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">([</span><span class="mi">67</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">68</span><span class="p">])</span>
+<span class="go">|◼︎| |H|E|L|L|O|,| |W|O|R|L|D| |◼︎|</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="message-posting">
+<h2>Message Posting<a class="headerlink" href="#message-posting" title="Permalink to this headline"></a></h2>
+<p>Messages can be posted (using <a class="reference internal" href="#vesta.Client.post_message" title="vesta.Client.post_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vesta.Client.post_message()</span></code></a>) as either
+text strings or two-dimensional arrays of character codes representing the
+exact positions of characters on the board.</p>
+<p>If <cite>text</cite> is specified, lines will be centered horizontally and vertically if
+possible. Character codes will be inferred for alphanumeric and punctuation, or
+can be explicitly specified in-line in the message with curly braces containing
+the character code (such as <code class="docutils literal notranslate"><span class="pre">{5}</span></code> or <code class="docutils literal notranslate"><span class="pre">{65}</span></code>).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021 Jon Parise.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
