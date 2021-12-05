@@ -189,7 +189,7 @@ sequences inside curly braces, such as <code class="docutils literal notranslate
 </dd>
 </dl>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{67}</span><span class="s2"> Hello, World </span><span class="si">{68}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="go">[67, 61, 8, 5, 12, 12, 15, 55, 61, 23, 15, 18, 12, 4, 61, 68]</span>
+<span class="go">[67, 0, 8, 5, 12, 12, 15, 55, 0, 23, 15, 18, 12, 4, 0, 68]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -211,7 +211,7 @@ maximum number of support characters</p>
 </dd>
 </dl>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_row</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{67}</span><span class="s2"> Hello, World </span><span class="si">{68}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
-<span class="go">[0, 0, 0, 67, 61, 8, 5, 12, 12, 15, 55, 61, 23, 15, 18, 12, 4, 61, 68, 0, 0, 0]</span>
+<span class="go">[0, 0, 0, 67, 0, 8, 5, 12, 12, 15, 55, 0, 23, 15, 18, 12, 4, 0, 68, 0, 0, 0]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -221,7 +221,7 @@ maximum number of support characters</p>
 <span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">pprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">data:</span> <span class="pre">Union[List[int],</span> <span class="pre">List[List[int]]],</span> <span class="pre">stream:</span> <span class="pre">TextIO</span> <span class="pre">=</span> <span class="pre">&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;,</span> <span class="pre">*,</span> <span class="pre">sep:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'|',</span> <span class="pre">block:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'◼︎'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vesta.pprint" title="Permalink to this definition"></a></dt>
 <dd><p>Prints a console-formatted representation of encoded character data.</p>
 <p><code class="docutils literal notranslate"><span class="pre">data</span></code> may be a single list or a two-dimensional array of character codes.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">([</span><span class="mi">67</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">68</span><span class="p">])</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">([</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">68</span><span class="p">])</span>
 <span class="go">|◼︎| |H|E|L|L|O|,| |W|O|R|L|D| |◼︎|</span>
 </pre></div>
 </div>
