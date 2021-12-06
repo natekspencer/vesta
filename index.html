@@ -207,13 +207,38 @@ used to fill out any additional space.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the string contains unsupported characters or codes,
 or if the resulting encoding sequence would exceed the
-maximum number of support characters</p>
+maximum number of supported columns</p>
 </dd>
 </dl>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_row</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{67}</span><span class="s2"> Hello, World </span><span class="si">{68}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
 <span class="go">[0, 0, 0, 67, 0, 8, 5, 12, 12, 15, 55, 0, 23, 15, 18, 12, 4, 0, 68, 0, 0, 0]</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="vesta.encode_text">
+<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">encode_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Color.BLACK</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breaks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AbstractSet</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">frozenset({0})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.encode_text" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes a string of text into rows of character codes.</p>
+<p>In addition to printable characters, the string can contain character code
+sequences inside curly braces, such as <code class="docutils literal notranslate"><span class="pre">{5}</span></code> or <code class="docutils literal notranslate"><span class="pre">{65}</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">align</span></code> controls the text’s alignment within the row: <cite>left</cite>, <cite>right</cite>, or
+<cite>center</cite>. <cite>margin</cite> specifies the width (in columns) of the left and right
+margins. The <code class="docutils literal notranslate"><span class="pre">fill</span></code> character code (generally a <a class="reference internal" href="#vesta.Color" title="vesta.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>) is
+used to fill out any additional space.</p>
+<p><code class="docutils literal notranslate"><span class="pre">breaks</span></code> is the set of character codes used to compute line breaks. If a
+line of text won’t fit in the available columns, it will be “broken” at the
+first preceding break character, and the remaining characters will continue
+on the next row (potentially subject to additional breaks). If a break
+cannot be found, the line will be broken at the column limit (potentially
+mid-“word”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the string contains unsupported characters or codes,
+or if the resulting encoding sequence would exceed the
+maximum number of supported rows</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
