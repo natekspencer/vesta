@@ -113,13 +113,18 @@ additional HTTP <code class="docutils literal notranslate"><span class="pre">hea
 <span class="sig-name descname"><span class="pre">post_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subscription_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.Client.post_message" title="Permalink to this definition"></a></dt>
 <dd><p>Post of a new message to a subscription.</p>
 <p>The authenticated viewer must have access to the subscription.</p>
-<p><cite>message</cite> can be either a string of text or a two-dimensional array of
-character codes representing the exact positions of characters on the
-board.</p>
+<p><cite>message</cite> can be either a string of text or a two-dimensional (6, 22)
+array of character codes representing the exact positions of characters
+on the board.</p>
 <p>If text is specified, lines will be centered horizontally and
 vertically if possible. Character codes will be inferred for
 alphanumeric and punctuation, or can be explicitly specified in-line in
 the message with curly braces containing the character code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if <cite>message</cite> is a list with unsupported dimensions</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
