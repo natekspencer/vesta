@@ -223,14 +223,17 @@ maximum number of supported columns</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="vesta.encode_text">
-<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">encode_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Color.BLACK</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breaks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AbstractSet</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">frozenset({0})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.encode_text" title="Permalink to this definition"></a></dt>
-<dd><p>Encodes a string of text into rows of character codes.</p>
-<p>In addition to printable characters, the string can contain character code
+<span class="sig-prename descclassname"><span class="pre">vesta.</span></span><span class="sig-name descname"><span class="pre">encode_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'left'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valign</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'top'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Color.BLACK</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breaks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AbstractSet</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">frozenset({0})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#vesta.encode_text" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes a string of text into six full rows of character codes.</p>
+<blockquote>
+<div><p>In addition to printable characters, the string can contain character code
 sequences inside curly braces, such as <code class="docutils literal notranslate"><span class="pre">{5}</span></code> or <code class="docutils literal notranslate"><span class="pre">{65}</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">align</span></code> controls the text’s alignment within the row: <cite>left</cite>, <cite>right</cite>, or
-<cite>center</cite>. <cite>margin</cite> specifies the width (in columns) of the left and right
-margins. The <code class="docutils literal notranslate"><span class="pre">fill</span></code> character code (generally a <a class="reference internal" href="#vesta.Color" title="vesta.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>) is
-used to fill out any additional space.</p>
+<cite>center</cite>. <code class="docutils literal notranslate"><span class="pre">valign</span></code> controls the text’s vertical alignment within the full
+board: <cite>top</cite>, <cite>middle</cite>, or <cite>bottom</cite>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">margin</span></code> specifies the width (in columns) of the left and right margins.
+The <code class="docutils literal notranslate"><span class="pre">fill</span></code> character code (generally a <a class="reference internal" href="#vesta.Color" title="vesta.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>) is used to fill
+out any additional space.</p>
 <p><code class="docutils literal notranslate"><span class="pre">breaks</span></code> is the set of character codes used to compute line breaks. If a
 line of text won’t fit in the available columns, it will be “broken” at the
 first preceding break character, and the remaining characters will continue
@@ -238,12 +241,31 @@ on the next row (potentially subject to additional breaks). If a break
 cannot be found, the line will be broken at the column limit (potentially
 mid-“word”).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the string contains unsupported characters or codes,
+<dt class="field-odd">raises ValueError</dt>
+<dd class="field-odd"><p>if the string contains unsupported characters or codes,
 or if the resulting encoding sequence would exceed the
 maximum number of supported rows</p>
 </dd>
 </dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">encode_text</span><span class="p">(</span><span class="s2">&quot;multiple</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>lines
+of
+text”, align=”center”, valign=”middle”)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>[</dt><dd><p>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 13, 21, 12, 20, 9, 16, 12, 5, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 12, 9, 14, 5, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 5, 24, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],</p>
+</dd>
+</dl>
+<p>]</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="py function">
