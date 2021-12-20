@@ -182,13 +182,18 @@ def encode_text(
     nrows = len(rows)
     if nrows < ROWS and valign is not None:
         empty = [fill] * COLS
+
+        def empty_rows(amount: int) -> List[List[int]]:
+            """Return the specified amount of empty rows."""
+            return [empty.copy() for _ in range(amount)]
+
         if valign == "top":
-            rows += [empty] * (ROWS - nrows)
+            rows += empty_rows(ROWS - nrows)
         elif valign == "bottom":
-            rows = [empty] * (ROWS - nrows) + rows
+            rows = empty_rows(ROWS - nrows) + rows
         elif valign == "middle":
             pad = (ROWS - nrows) / 2
-            rows = [empty] * math.floor(pad) + rows + [empty] * math.ceil(pad)
+            rows = empty_rows(math.floor(pad)) + rows + empty_rows(math.ceil(pad))
         else:
             raise ValueError(f"unknown vertical alignment: {valign}")
     elif nrows > ROWS:
